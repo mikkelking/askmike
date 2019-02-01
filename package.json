@@ -1,0 +1,32 @@
+{
+  "name": "askmike",
+  "version": "1.0.0",
+  "description": "Ask Mike for help",
+  "main": "cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "swiss",
+    "army",
+    "knife",
+    "cli"
+  ],
+  "bin": {
+    "askmike": "./cli.js",
+    "ask-mike": "./cli.js"
+  },
+  "author": "Mike King",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "git-status": "^1.0.9",
+    "ip": "^1.1.5",
+    "os": "^0.1.1",
+    "recursive-readdir": "^2.2.2"
+  },
+  "devDependencies": {
+    "jest": "^23.6.0",
+    "mkpath": "^1.0.0"
+  }
+}
