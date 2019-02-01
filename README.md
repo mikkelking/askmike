@@ -1,10 +1,10 @@
-# Kebab-ify
+# Ask Mike
 
 A Command line utility to do stuff
 
 ## Why?
 
-Because I write useful code, and want to install it in all of my environments
+Because I write useful code (at least for me), and want to install it in all of my environments
 
 ## Getting started
 
