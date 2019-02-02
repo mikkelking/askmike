@@ -2,4 +2,4 @@
 prefix=/home/users/me
 strict-ssl=Rubbish
 optional=true
-@nab:registry=https://artifactory.aus.thenational.com:443/api/npm/NPM-SHARED-build/
+@company:registry=https://artifactory.company.com:443/api/npm/NPM-SHARED-build/
