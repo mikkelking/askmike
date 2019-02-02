@@ -16,28 +16,30 @@ let errors = []
 switch (target) {
   case 'ip':
     const addresses = getip(opts)
-    console.log(`IP Addresses: \n${addresses.join('\n')}`)
+    console.error(`IP Addresses: \n${addresses.join('\n')}`)
     break
   case 'nab-check':
-    errors = nabCheck(opts)
+    errors = nabCheck.checkAll(opts)
     // No output - command will do its own
     break
   default:
-    console.log("Please provide a command as a parameter, eg 'ip' or 'nab-check'")
+    console.error("Please provide a command as a parameter, eg 'ip' or 'nab-check'")
+    process.exit(1)
     break
 }
 
 // debug('errors', errors)
 try {
   if (errors.length > 0) {
-    // console.log(errors.join('\n'))
-    debug('FAIL')
+    // console.error(errors.join('\n'))
+    console.log('FAIL\n\n')
     process.exit(1)
   } else {
-    debug('OK')
+    console.error('OK\n\n')
     debug(`${target}: ${chalk.green.inverse('ok')}`)
     process.exit(0)
   }
 } catch (e) {
-  console.error(e)
+  console.error('Exception', e)
+  process.exit(1)
 }

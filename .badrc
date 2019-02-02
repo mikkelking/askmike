@@ -1,0 +1,5 @@
+# Sample .rc file for testing - this will pass tests
+prefix=/home/users/me
+strict-ssl=Rubbish
+optional=true
+@nab:registry=https://artifactory.aus.thenational.com:443/api/npm/NPM-SHARED-build/

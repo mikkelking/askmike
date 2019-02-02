@@ -1,0 +1,5 @@
+# Sample .rc file for testing - this will pass tests
+strict-ssl=false
+optional=false
+@nab:registry=https://artifactory.aus.thenational.com:443/api/npm/NPM-SHARED-build/
+cafile=/etc/hosts
