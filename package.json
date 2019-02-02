@@ -1,6 +1,6 @@
 {
   "name": "askmike",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Ask Mike for help",
   "main": "cli.js",
   "scripts": {

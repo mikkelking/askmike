@@ -15,10 +15,10 @@ askmike ip   # Prints your ip address
 
 # Available Commands
 
-| Command | Purpose                                   |
-|---------|-------------------------------------------|
-| ip      | Simple show ip address                    |
-| ipall   | Show all ip addresses and interface names |
+| Command  | Purpose                                   |
+| -------- | ----------------------------------------- |
+| nabcheck | Check your settings, proxies, .npmrc etc  |
+| ip       | Show all ip addresses and interface names |
 
 
 # Development
