@@ -6,6 +6,10 @@
   "scripts": {
     "test": "jest"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikkelking/askmike.git"
+  },
   "keywords": [
     "swiss",
     "army",
