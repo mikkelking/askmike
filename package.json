@@ -20,16 +20,12 @@
   "license": "MIT",
   "dependencies": {
     "chalk": "^2.4.2",
-    "git-status": "^1.0.9",
-    "ip": "^1.1.5",
     "minimist": "^1.2.0",
     "os": "^0.1.1",
-    "rc": "^1.2.8",
-    "recursive-readdir": "^2.2.2"
+    "rc": "^1.2.8"
   },
   "devDependencies": {
     "child_process": "^1.0.2",
-    "jest": "^24.0.0",
-    "mkpath": "^1.0.0"
+    "jest": "^24.0.0"
   }
 }
