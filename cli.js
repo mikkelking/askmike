@@ -1,54 +1,26 @@
 #!/usr/bin/env node
 
-const chalk = require("chalk");
-const fs = require("fs");
-const ip = require("ip");
-const os = require("os");
+const chalk = require('chalk')
+const fs = require('fs')
 
-const [, , ...args] = process.argv;
-const target = args[0];
+const getip = require('./lib/ip')
+const nabCheck = require('./lib/nab-check')
 
-const getip = () => {
-  const ifaces = os.networkInterfaces();
-  const results = [];
+var opts = require('minimist')(process.argv.slice(2))
+// console.dir(opts)
 
-  Object.keys(ifaces).forEach(function(ifname) {
-    let alias = 0;
-
-    ifaces[ifname].forEach(function(iface) {
-      if ("IPv4" !== iface.family || iface.internal !== false) {
-        // skip over internal (i.e. 127.0.0.1) and non-ipv4 addresses
-        return;
-      }
-
-      if (alias >= 1) {
-        // this single interface has multiple ipv4 addresses
-        results.push(`${ifname}(${alias}): ${iface.address}`);
-      } else {
-        // this interface has only one ipv4 adress
-        results.push(`${ifname}: ${iface.address}`);
-      }
-      ++alias;
-    });
-  });
-  return results;
-};
+const target = opts._[0]
 
 switch (target) {
-  case "ip":
-    const addr = ip.address();
-    console.log(`Your ip address is ${addr}`);
-    break;
-  case "ipall":
-    const addresses = getip();
-    console.log(`IP Addresses: \n${addresses.join("\n")}`);
-    break;
-  case "nab-check":
-    console.log(`nab-check is not supported yet`);
-    break;
+  case 'ip':
+    const addresses = getip(opts)
+    console.log(`IP Addresses: \n${addresses.join('\n')}`)
+    break
+  case 'nab-check':
+    nabCheck(opts)
+    // No output - command will do its own
+    break
   default:
-    console.log(
-      "Please provide a command as a parameter, eg 'ip' or 'nab-check'"
-    );
-    break;
+    console.log("Please provide a command as a parameter, eg 'ip' or 'nab-check'")
+    break
 }
