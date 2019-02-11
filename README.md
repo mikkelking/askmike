@@ -17,7 +17,7 @@ askmike ip   # Prints your ip address
 
 | Command  | Purpose                                   |
 | -------- | ----------------------------------------- |
-| nabcheck | Check your settings, proxies, .npmrc etc  |
+| cfg-check | Check your settings, proxies, .npmrc etc  |
 | ip       | Show all ip addresses and interface names |
 
 
